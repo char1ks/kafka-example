@@ -2,7 +2,7 @@
 set -euo pipefail
 TOPIC=${1:-order_topic}
 MS=${2:-60000}
-docker exec kafka kafka-configs.sh \
+docker exec kafka kafka-configs \
   --bootstrap-server localhost:9092 \
   --alter \
   --topic "$TOPIC" \
